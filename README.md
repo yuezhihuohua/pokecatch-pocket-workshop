@@ -1,6 +1,6 @@
 # Poke’Catch 口袋工坊
 
-面向手机触控的中文本地存档数值工具。当前版本 **0.3.0**，由 [yuezhihuohua](https://github.com/yuezhihuohua) 维护，独立于[配队助手](https://github.com/yuezhihuohua/pokecatch-helper-zh-cn)。
+支持手机触控与电脑窗口的中文本地存档数值工具。当前版本 **0.3.1**，由 [yuezhihuohua](https://github.com/yuezhihuohua) 维护，独立于[配队助手](https://github.com/yuezhihuohua/pokecatch-helper-zh-cn)。
 
 它修改当前游戏站点的本地存档数值，不是云端账号管理工具。
 
@@ -8,7 +8,7 @@
 
 在支持 Userscript 的浏览器环境中配置脚本管理器，然后[安装口袋工坊](https://raw.githubusercontent.com/yuezhihuohua/pokecatch-pocket-workshop/main/pokecatch-save-editor.mobile.zh-CN.user.js)。若看到代码，请通过管理器新建／导入脚本。
 
-已有旧版时替换原脚本，保存并刷新；同一页面只启用一份修改器。适用于 [Netlify](https://pokecatch-online.netlify.app/) / [Cloudflare Pages](https://pokecatch-online.pages.dev/)。手机与主屏幕独立页面能否运行脚本，由浏览器和管理器决定。当前自动更新关闭，新版从此仓库手动安装。
+手机、电脑使用同一份脚本，文件名保留 `.mobile` 以兼容已有安装。已有旧版时替换原脚本，保存并刷新；同一页面只启用一份修改器。适用于 [Netlify](https://pokecatch-online.netlify.app/) / [Cloudflare Pages](https://pokecatch-online.pages.dev/)。手机与主屏幕独立页面能否运行脚本，由浏览器和管理器决定。当前自动更新关闭，新版从此仓库手动安装。
 
 ## 功能
 
@@ -42,7 +42,7 @@
 
 成长上限依据本地已保存的解锁进度、徽章和地区状态计算。手动改到 100 级不会解锁章节、自动进化或取消活动临时限级；未知游戏版本会停止推断具体上限，仍可手动填写等级。
 
-最近核对公开游戏资源 `app.3bdd8140e1.js`（2026-11-20）；进行了 840 次成长上限规则对照，以及压缩存档、逐字段写入、预览变化拦截与按项撤销检查。界面验证使用虚构存档和模拟手机／窄屏／桌面，尚未进行手机真机验证。
+2026-11-21 核对公开游戏资源 `app.f01c6dd773.js`，继续兼容 `app.3bdd8140e1.js`。两版的上限规则及所需章节资料一致；分别完成 840 次原生成长上限规则对照，并检查压缩存档、逐字段写入、预览变化拦截与按项撤销。0.3.1 修复新版资源编号导致上限显示“—”的问题，加载中会等待重查，未知版本仍停止推断；图像跟随游戏指定的素材地址。界面验证使用虚构存档与模拟手机／桌面，尚未进行手机真机验证。
 
 ## 来源、数据与反馈
 
